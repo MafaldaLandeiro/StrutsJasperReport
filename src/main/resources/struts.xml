@@ -6,7 +6,7 @@
 	<package name="personDefault" namespace="/" extends="jasperreports-default">
 		<action name="personJasperReport" class="org.StrutsJasperReport.action.JasperAction">
 			<result name="success" type="jasper">
-				<param name="location">/jasper/person_compiled_template.jasper</param>
+				<param name="location">/WEB-INF/classes/jasper/person_compiled_template.jasper</param>
 				<param name="dataSource">personList</param>
 				<param name="format">PDF</param>
 			</result>

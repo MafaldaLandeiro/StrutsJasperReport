@@ -29,12 +29,15 @@ public class JasperAction extends ActionSupport {
 		this.personList.add(p2);
 		this.personList.add(p3);
 		this.personList.add(p4);
-
+		String resourceTemplate = getClass().getClassLoader()
+				.getResource("jasper\\person_jasper_template.jrxml").getPath();
+		String resourceCompiled = resourceTemplate.replace(
+				"jasper/person_jasper_template.jrxml",
+				"jasper/person_compiled_template.jasper");
 		try {
-			JasperCompileManager
-					.compileReportToFile(
-							"C:\\Tools\\Tomcat\\apache-tomcat-7.0.62\\wtpwebapps\\StrutsJasperReport\\jasper\\person_jasper_template.jrxml",
-							"C:\\Tools\\Tomcat\\apache-tomcat-7.0.62\\wtpwebapps\\StrutsJasperReport\\jasper\\person_compiled_template.jasper");
+
+			JasperCompileManager.compileReportToFile(resourceTemplate,
+					resourceCompiled);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return ERROR;

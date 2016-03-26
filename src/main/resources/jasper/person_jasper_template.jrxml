@@ -10,7 +10,7 @@
       <staticText>
         <reportElement x="0" y="0" width="180" height="15"/>
         <textElement/>
-        <text><![CDATA[PERSONS LIST - REPORT]]></text>
+        <text><![CDATA[PEOPLE LIST - REPORT]]></text>
       </staticText>
     </band>
   </title>
